@@ -5,44 +5,42 @@ Movie IDs that correspond to those found in The Movie Database's API.
 
 <br >
   
-# 📁 Collection: User 
-
-<br >
-
+# Collection: User
 ## End-point: RegisterUser
 Registers a user.
-#### Method: 🟨 POST 🟨
+
+![POST Image](https://i.imgur.com/RSexnGX.png)
 >```
 >http://localhost:8080/register
 >```
-#### Body (**json**)
-
+#### Body(**json**)
 ```json
 {
     "username": "test2",
     "password": "test"
 }
-```  
+```
 
 <br >
 
 ## End-point: GetUserByID
 Returns the user with corresponding user ID.
-#### Method: 🟩 GET 🟩
+
+![GET Image](https://i.imgur.com/EM0n9ms.png)
 >```
 >http://localhost:8080/user/6
 >```
 
 <br >
-  
+
 ## End-point: UpdateUser
 Updates specified user's login details. (WIP).
-#### Method: 🟦 PUT 🟦
+
+![PUT Image](https://i.imgur.com/c32fs7n.png)
 >```
 >http://localhost:8080/user/4
 >```
-#### Body (**json**)
-
+#### Body(**json**)
 ```json
 {
     "username": "test2",
@@ -54,23 +52,24 @@ Updates specified user's login details. (WIP).
 
 ## End-point: DeleteUser
 Deletes a user with the corresponding user ID.
-#### Method: 🟥 DELETE 🟥
+
+![DELETE Image](https://i.imgur.com/kpUiCCt.png)
 >```
 >http://localhost:8080/user/3
 >```
 
 <br >
-  
+
 ## End-point: LoginUser
 Logs the user in.
 
 If login attempt is successful, a cookie containing a JWT called "jwt" is returned in the response.
-#### Method: 🟨 POST 🟨
+
+![POST Image](https://i.imgur.com/RSexnGX.png)
 >```
 >http://localhost:8080/login
 >```
-#### Body (**json**)
-
+#### Body(**json**)
 ```json
 {
     "username": "test",
@@ -79,19 +78,16 @@ If login attempt is successful, a cookie containing a JWT called "jwt" is return
 ```
 
 <br >
-  
-# 📁 Collection: Review 
 
-<br >
-
+# Collection: Review
 ## End-point: CreateReview
 Generates a review.
-#### Method: 🟨 POST 🟨
+
+![POST Image](https://i.imgur.com/RSexnGX.png)
 >```
 >http://localhost:8080/review
 >```
-#### Body (**json**)
-
+#### Body(**json**)
 ```json
 {
     "authorId": 2,
@@ -103,19 +99,21 @@ Generates a review.
 ```
 
 <br >
-  
+
 ## End-point: GetReviewsByMovieID
 Returns all reviews with specified movie ID.
-#### Method: 🟩 GET 🟩
+
+![GET Image](https://i.imgur.com/EM0n9ms.png)
 >```
 >http://localhost:8080/review/19995
 >```
 
 <br >
-  
+
 ## End-point: DeleteReview
 Deletes review with corresponding review ID.
-#### Method: 🟥 DELETE 🟥
+
+![DELETE Image](https://i.imgur.com/kpUiCCt.png)
 >```
 >http://localhost:8080/review/5
 >```
@@ -126,12 +124,12 @@ Deletes review with corresponding review ID.
 Updates review with corresponding review ID.
 
 Custom middleware prevents user from editing reviews they didn't author.
-#### Method: 🟦 PUT 🟦
+
+![PUT Image](https://i.imgur.com/c32fs7n.png)
 >```
 >http://localhost:8080/review/2
 >```
-#### Body (**json**)
-
+#### Body(**json**)
 ```json
 {
     "movieId": "19995",
@@ -142,21 +140,28 @@ Custom middleware prevents user from editing reviews they didn't author.
 ```
 
 <br >
-  
+
 ## End-point: GetAvgRatingByMovieID
 Returns the average rating of reviews containing specified Movie ID as a float.
 
 \-1 is returned if no reviews have been created with the specified Movie ID.
-#### Method: 🟩 GET 🟩
+
+![GET Image](https://i.imgur.com/EM0n9ms.png)
 >```
 >http://localhost:8080/review/19995/rating
 >```
 
 <br >
-  
+
 ## End-point: GetMoviesByAuthor
 Returns a list of all of the reviews with corresponding username.
-#### Method: 🟩 GET 🟩
+
+![GET Image](https://i.imgur.com/EM0n9ms.png)
 >```
 >http://localhost:8080/review/user/username
 >```
+
+<br >
+
+[Created using PostmanMarkdownGenerator by Ross W.](https://github.com/rossw01/postman-markdown-generator)
+
